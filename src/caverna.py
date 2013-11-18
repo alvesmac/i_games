@@ -36,7 +36,7 @@ class Caverna:
         tunel_1 = Tunel(self.html, "Tunel0", self.camara).cria_tunel()
         tunel_2 = Tunel(self.html, "Tunel1", self.camara).cria_tunel()
         tunel_3 = Tunel(self.html, "Tune12", self.camara).cria_tunel()
-        #self.main <= self.camara.div
+        self.main <= self.camara.div
         return self
 
 
