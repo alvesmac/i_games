@@ -93,6 +93,8 @@ class Tunel:
         self.lugar, self.par_ord = lugar, par_ordenado
         self.entrada = self.passagem = self.div = None
         self.camera = ()
+        self.lugar0 = self.caverna.camara['camara_%d' % par_ordenado[0]]
+        self.lugar1 = self.caverna.camara['camara_%d' % par_ordenado[1]]
 
     def movimenta(self, ev):
         print(ev.target.Id)
