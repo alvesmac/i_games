@@ -15,6 +15,9 @@ Caverna é um jogo de aventuras em uma caverna.
 """
 CAVEX = "https://dl.dropboxusercontent.com/u/1751704/labase/caverna/img/cavernax.jpg"
 CAVEZ = "https://dl.dropboxusercontent.com/u/1751704/labase/caverna/img/cavernaz.jpg"
+CAMARAS = [0, 1, 2, 3]
+TUNEIS = [(0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 3)]
+#[par for par in TUNEIS if 0 in par]
 
 
 class Caverna:
@@ -44,9 +47,9 @@ class Caverna:
         self.sala = self.camara
 
         self.tunel = {
-            'tunel_%d' % a:
-            Tunel(self.html, "tunel_%d" % a, self.camara, self.camara.passagem, self).cria_tunel()
-            for a in range(0, 3)
+            'tunel_%d_%d' % a:
+            Tunel(self.html, "tunel_%d_%d" % a, self.camara, self.camara.passagem, self).cria_tunel()
+            for a in TUNEIS
         }
         return self
 
